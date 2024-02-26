@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Notifications</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(to bottom, #190019, #2B124C, #522B5B, #854F6C, #DFB6B2, #FBE4DB);
+            color: #fff; /* Set default text color to white */
+        }
+
+        .header {
+            background-color: #FBE4DB;
+            color: #1d010f;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-access-area {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            margin-left: auto; /* Move icons to the right */
+        }
+
+        .icon img {
+            width: 27px;
+        }
+
+        .brand-name {
+            font-size: 1.2em;
+            font-weight: bolder;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        #searchInput {
+            padding: 5px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 800px;
+        }
+
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .notification-section {
+            padding: 20px;
+        }
+
+        .back-button {
+            padding: 10px;
+            background-color: #240314; /* Adjust the color as needed */
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .back-button:hover {
+            background-color: #1c0122; /* Adjust the hover color as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <!-- Your existing header content goes here -->
+
+        <!-- Add the back button -->
+        <a href="Prodis.html" class="back-button">Back</a>
+    </div>
+    
+    <div class="notification-section">
+        <!-- Add your notification content here -->
+        <h2>Order Updates</h2>
+        <ul>
+            <li>Order confirmation.</li>
+            <li>Shipment tracking information.</li>
+            <!-- Add more order-related notifications -->
+        </ul>
+
+        <h2>Account-related Notifications</h2>
+        <ul>
+            <li>Password reset requests.</li>
+            <li>Account creation confirmation.</li>
+            <!-- Add more account-related notifications -->
+        </ul>
+
+        <h2>Product-related Notifications</h2>
+        <ul>
+            <li>New product arrivals.</li>
+            <li>Price drop alerts for wishlisted items.</li>
+            <!-- Add more product-related notifications -->
+        </ul>
+
+        <!-- Add other notification sections -->
+
+    </div>
+
+    <!-- Sliding menu -->
+    <div class="sliding-menu" id="menu">
+        <!-- Your existing sliding menu content goes here -->
+    </div>
+
+    <script src="script.js"></script> <!-- Include your existing JavaScript file here -->
+</body>
+
+</html>

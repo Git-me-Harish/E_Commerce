@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #190019, #2B124C, #522B5B, #854F6C, #DFB6B2, #FBE4DB);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Order Item */
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            margin: 10px;
+        }
+
+        .order-item img {
+            max-width: 80px;
+            max-height: 80px;
+        }
+
+        .order-item-details {
+            flex: 1;
+            margin: 0 10px;
+            text-align: left;
+        }
+
+        /* Order Page Container */
+        .order-container {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Buttons and Links */
+        .btn {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .order-item {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <title>Order History</title>
+</head>
+
+<body>
+
+    <!-- Order History Page Container -->
+    <div class="order-container">
+
+        <!-- Order Items -->
+        <div class="order-item">
+            <img src="product1.jpg" alt="Product 1">
+            <div class="order-item-details">
+                <h3>Product 1</h3>
+                <p>Price: $50.00</p>
+                <p>Quantity: 2</p>
+                <p>Order Date: January 1, 2023</p>
+                <p>Delivery Date: January 10, 2023</p>
+            </div>
+        </div>
+
+        <div class="order-item">
+            <img src="product2.jpg" alt="Product 2">
+            <div class="order-item-details">
+                <h3>Product 2</h3>
+                <p>Price: $30.00</p>
+                <p>Quantity: 1</p>
+                <p>Order Date: February 5, 2023</p>
+                <p>Delivery Date: February 15, 2023</p>
+            </div>
+        </div>
+
+        <!-- Add more order items as needed -->
+
+    </div>
+
+    <!-- Continue Shopping Button -->
+    <a href="Prodis.html" class="btn">Continue Shopping</a>
+
+</body>
+
+</html>

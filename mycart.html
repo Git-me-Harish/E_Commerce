@@ -1,0 +1,126 @@
+<h1>Cart Page</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background: linear-gradient(to bottom, #190019, #2B124C, #522B5B, #854F6C, #DFB6B2, #FBE4DB); 
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Shopping Cart Styles */
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .product-image {
+            max-width: 80px;
+            max-height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product-details {
+            flex-grow: 1;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        .cart-summary {
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .cart-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .promo-code-input {
+            margin-top: 10px;
+            padding: 5px;
+        }
+
+        .checkout-btn {
+            padding: 10px 20px;
+            background-color: #36b336;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Additional Styles (Add more styles based on your needs) */
+
+    </style>
+    <title>Your Shopping Cart</title>
+</head>
+
+<body>
+    <div class="cart-container">
+        <!-- Product Information -->
+        <div class="product-item">
+            <img src="product1.jpg" alt="Product 1" class="product-image">
+            <div class="product-details">
+                <h3>Product 1</h3>
+                <p>Price: $20.00</p>
+                <p>Quantity: <input type="number" value="1"></p>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+
+        <div class="product-item">
+            <img src="product2.jpg" alt="Product 2" class="product-image">
+            <div class="product-details">
+                <h3>Product 2</h3>
+                <p>Price: $30.00</p>
+                <p>Quantity: <input type="number" value="2"></p>
+            </div>
+            <button class="remove-btn">Remove</button>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <p>Subtotal: $70.00</p>
+            <p>Shipping Costs: $5.00</p>
+            <p>Taxes: $7.00</p>
+        </div>
+
+        <!-- Cart Actions -->
+        <div class="cart-actions">
+            <button class="update-btn">Update Quantity</button>
+            <button class="remove-all-btn">Clear Cart</button>
+        </div>
+
+        <!-- Promo Code or Discount Entry -->
+        <input type="text" placeholder="Enter Promo Code" class="promo-code-input">
+        <button class="apply-btn">Apply</button>
+
+        <!-- Proceed to Checkout -->
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</body>
+
+</html>
+

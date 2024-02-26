@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product Display</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(to bottom, #190019, #2B124C, #522B5B, #854F6C, #DFB6B2, #FBE4DB);
+        }
+
+        .header {
+            background-color: #FBE4DB;
+            color: #1d010f;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-access-area {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            margin-left: auto; /* Move icons to the right */
+        }
+
+        .icon img {
+            width: 27px;
+        }
+
+        .brand-name {
+            font-size: 1.2em;
+            font-weight: bolder;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        #searchInput {
+            padding: 5px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 800px;
+        }
+
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sliding-menu-icon {
+            font-size: 2.5em;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        /* Styling for sliding menu */
+        .sliding-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #250327;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            color: #FBE4DB;
+        }
+
+        .sliding-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #FBE4DB;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sliding-menu a:hover {
+            color: #854F6C;
+        }
+
+        .sliding-menu .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 3em;
+            cursor: pointer;
+        }
+
+        .heart-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .cart-icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .filter-container {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        select {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="sliding-menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="top-access-area">
+            <!-- Centered brand name -->
+            <div class="brand-name"></div>
+            <!-- Navigation links on the left -->
+            <a href="Prodis.html">Home</a>
+            <!-- Filter options -->
+            <div class="filter-container">
+                <label for="categoryFilter">Filter by Category:</label>
+                <select id="categoryFilter" onchange="filterProducts()">
+                    <option value="all">All Categories</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="shoes">Shoes</option>
+                    <!-- Add more categories as needed -->
+                </select>
+
+                <label for="sortOrder">Sort by Price:</label>
+                <select id="sortOrder" onchange="sortProducts()">
+                    <option value="asc">Low to High</option>
+                    <option value="desc">High to Low</option>
+                </select>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search..." oninput="showSuggestions()">
+        <div id="searchSuggestions" class="search-suggestions"></div>
+    </div>
+
+    <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="dress1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Description of Product 1.</p>
+            <p>Price: $X.XX</p>
+            <button class="heart-icon" onclick="addToWishlist(1)">&#10084;</button>
+            <button class="cart-icon" onclick="addToCart(1)">&#128722;</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="dress2.jpg" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>Description of Product 2.</p>
+            <p>Price: $X.XX</p>
+            <button class="heart-icon" onclick="addToWishlist(2
+
+)">&#10084;</button>
+            <button class="cart-icon" onclick="addToCart(2)">&#128722;</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="dress3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Description of Product 3.</p>
+            <p>Price: $X.XX</p>
+        </div>
+         <!-- Product 4 -->
+         <div class="product">
+            <img src="dress4.jpg" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Description of Product 4.</p>
+            <p>Price: $X.XX</p>
+        </div>
+         <!-- Product 5 -->
+         <div class="product">
+            <img src="dress5.jpg" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>Description of Product 5.</p>
+            <p>Price: $X.XX</p>
+        </div>
+          <!-- Product 6 -->
+          <div class="product">
+            <img src="dress6.jpg" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>Description of Product 6.</p>
+            <p>Price: $X.XX</p>
+        </div>
+         <!-- Product 7 -->
+         <div class="product">
+            <img src="dress7.jpg" alt="Product 7">
+            <h3>Product 7</h3>
+            <p>Description of Product 7.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <!-- Product 8 -->
+        <div class="product">
+            <img src="dress8.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+
+        <div class="product">
+            <img src="3.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+
+        <div class="product">
+            <img src="5.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+
+        <div class="product">
+            <img src="dress12.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+
+        <div class="product">
+            <img src="dress10.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <div class="product">
+            <img src="dress13.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <div class="product">
+            <img src="dress14.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <div class="product">
+            <img src="dress15.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <div class="product">
+            <img src="dress16.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <div class="product">
+            <img src="dress9.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+        <div class="product">
+            <img src="2.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Description of Product 8.</p>
+            <p>Price: $X.XX</p>
+        </div>
+         <!-- Add more product divs as needed -->
+        <!-- Product grid goes here... -->
+        </div>
+    </div>
+</div>
+
+    <!-- Sliding menu -->
+    <div class="sliding-menu" id="menu">
+        <a href="Prodis.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="mycart.html">My Cart</a>
+        <a href="notifications.html">Notifications</a>
+        <a href="order.html">Order Details</a>
+
+        
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+    </div>
+
+    <script src="script.js"></script> <!-- Include your existing JavaScript file here -->
+
+    <script>
+        function showSuggestions() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var suggestionsContainer = document.getElementById("searchSuggestions");
+            suggestionsContainer.innerHTML = "";
+
+            // Define your page suggestions
+            var pages = [
+                { name: "Home", link: "Prodis.html" },
+                { name: "Mens", link: "mens.html" },
+                { name: "Womens", link: "womens.html" },
+                { name: "Kids", link: "kids.html" },
+            ];
+
+            // Filter suggestions based on the input
+            var filteredPages = pages.filter(function (page) {
+                return page.name.toLowerCase().includes(input);
+            });
+
+            // Display suggestions
+            filteredPages.forEach(function (page) {
+                var suggestion = document.createElement("div");
+                suggestion.innerHTML = "<a href='" + page.link + "'>" + page.name + "</a>";
+                suggestionsContainer.appendChild(suggestion);
+            });
+        }
+    </script>
+</body>
+
+</html>

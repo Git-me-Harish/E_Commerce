@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kids Products</title>
+    <style>
+        /* Add your specific styles for Kids page here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(to bottom, #190019, #2B124C, #522B5B, #854F6C, #DFB6B2, #FBE4DB);
+        }
+
+        .header {
+            background-color: #FBE4DB;
+            color: #1d010f;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-access-area {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .icons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            margin-left: auto; /* Move icons to the right */
+        }
+
+        .icon img {
+            width: 27px;
+        }
+
+        .brand-name {
+            font-size: 1.2em;
+            font-weight: bolder;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+        }
+
+        #searchInput {
+            padding: 5px;
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 800px;
+        }
+
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .sliding-menu-icon {
+            font-size: 2.5em;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        /* Styling for sliding menu */
+        .sliding-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: #250327;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            color: #FBE4DB;
+        }
+
+        .sliding-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #FBE4DB;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sliding-menu a:hover {
+            color: #854F6C;
+        }
+
+        .sliding-menu .close-btn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 3em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="top-access-area">
+            <!-- Adjusted link for Kids page -->
+            <a href="Prodis.html">Kids</a>
+            <!-- Other links: Mens, Womens, and Home -->
+        </div>
+        <div class="brand-name">Eleganza Emporium</div>
+    </div>
+
+    <!-- Content of Kids product display page goes here -->
+    <div class="product-container">
+        <!-- Kids Product 1 -->
+        <div class="product">
+            <img src="23.jpg" alt="Kids Product 1">
+            <h3>Kids Product 1</h3>
+            <p>Description of Kids Product 1.</p>
+            <p>Price: $X.XX</p>
+        </div>
+
+        <!-- Kids Product 2 -->
+        <div class="product">
+            <img src="20.jpg" alt="Kids Product 2">
+            <h3>Kids Product 2</h3>
+            <p>Description of Kids Product 2.</p>
+            <p>Price: $X.XX</p>
+        </div>
+
+        <!-- Add more Kids products as needed -->
+
+    </div>
+
+    <script src="script.js"></script> <!-- Include your JavaScript file here -->
+</body>
+
+</html>

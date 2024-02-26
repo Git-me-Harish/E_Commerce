@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #190019, #2B124C, #522B5B, #854F6C, #DFB6B2, #FBE4DB);
+            box-shadow: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* TOP ACCESS AREA */
+        .top-access {
+            background-color: #18072800;
+            color: #fff;
+            padding: 10px;
+        }
+
+        /* SLIDING BOX AREA */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* MIDDLE REGION */
+        .middle-region {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        /* MIDDLE REGION */
+.brand-box {
+    width: 10%;
+    border-image-width: auto;
+    margin-bottom: 20px;
+    padding: 90px;
+    background-color: #140b18;
+    color: #e3caca; /* Set text color to white */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(206, 189, 189, 0.865);
+}
+
+
+/* BOTTOM ACCESS AREA (About Us) */
+.about-container {
+    max-width: 1800px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: #fff;
+    color: #333; /* Set text color to a suitable color, e.g., dark gray */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+        h1 {
+            color: #e8e0e0;
+        }
+        h2 {
+            color: #141414,fff;
+        }
+        p {
+            margin-bottom:20px;
+        }
+
+        /* Sub-segments */
+        .about-segment {
+            margin-bottom: 30px;
+            justify-content: center;
+            align-items:center;
+        }
+
+        .medium-segment {
+            margin-bottom: 20px;
+            justify-content: left;
+            align-items: left;
+        }
+
+        .small-segment {
+            margin-bottom: 20px;
+        }
+
+        /* Contact information icons */
+        .contact-icons {
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            margin-top: 20px;
+        }
+
+        .contact-icon {
+            margin-right: 10px;
+        }
+
+        /* Shop Now button */
+        .shop-now-box {
+            margin-top:20px;
+            padding-left:20;
+            width:20;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: rgb(36, 8, 61);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 9px;
+            font-weight: bold;
+            display: ruby-base-container;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-icon {
+            margin-right: 15px;
+        }
+    </style>
+
+    <title>Welcome to Your Shopping Website</title>
+</head> 
+
+<body>
+     <!-- TOP ACCESS AREA -->
+     <div class="top-access">
+        <img src="logo.jpg" alt="Your Logo" style="max-width: 100px;">
+        <h1>Eleganza Emporium</h1>
+    </div>
+     
+    <!-- Navigation links on the left -->
+
+    <div class="header">
+            <!-- Navigation links on the left -->
+             <a href="login.html">Login</details></a>
+            <a href="signup.html">Signup</details></a>
+
+  <!-- MIDDLE REGION -->
+<div class="middle-region">
+    <div class="brand-box">
+        <img src="brand-1.jpg" alt="Brand 1 Image" style="width: 100%;">
+        <p>Zara, a renowned fashion retailer,
+             is celebrated for its trendsetting and accessible clothing,
+              providing the latest styles with a focus on fast fashion. </p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-2.jpg" alt="Brand 2 Image" style="width: 100%;">
+        <p>Puma, a global athletic and lifestyle brand,
+             is known for its innovative sports and casual wear, 
+             combining performance and style effortlessly.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-3.jpg" alt="Brand 3 Image" style="width: 100%;">
+        <p>Lacoste, an iconic French brand, is synonymous
+             with sporty elegance, offering high-quality apparel 
+             and accessories, most recognized for its crocodile logo.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-4.jpg" alt="Brand 4 Image" style="width: 100%;">
+        <p>New Balance, an American athletic footwear and apparel brand,
+            stands out for its commitment to comfort, performance,
+            and unique style in the world of sportswear.</p>
+    </div>
+
+    <div class="brand-box">       
+        <img src="brand-5.jpg" alt="Brand 5 Image" style="width: 100%;">
+        <p>Louis Vuitton, a luxury French fashion house, epitomizes sophistication
+           and craftsmanship, creating exclusive leather goods,
+           accessories, and high-end fashion.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-7.jpg" alt="Brand 7 Image" style="width: 100%;">
+        <p>Classic American style with a modern twist,
+            Tommy Hilfiger offers timeless fashion and 
+            iconic designs.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-8.jpg" alt="Brand 8 Image" style="width: 100%;">
+        <p>A contemporary and youthful label under the Armani umbrella, 
+           Armani Exchange combines modern style with urban sophistication,
+           offering fashion-forward pieces.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-9.jpg" alt="Brand 9 Image" style="width: 100%;">
+        <p>A luxury brand synonymous with Italian craftsmanship and opulent style,
+             Gucci is known for its high-end fashion and accessories.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-10.jpg" alt="Brand 10 Image" style="width: 100%;">
+        <p>A streetwear staple, Vans is renowned for its cool and casual footwear,
+             particularly its iconic skateboarding shoes.</p>
+    </div>
+
+    <div class="brand-box">
+        <img src="brand-6.jpg" alt="Brand 6 Image" style="width: 100%;">
+        <p>Burberry, a British luxury brand, is famed 
+           for its distinctive tartan pattern and classic
+         trench coats, representing timeless elegance and modern innovation</p>
+    </div>
+</div>
+
+  <!-- BOTTOM ACCESS AREA (About Us) -->
+    <div class="about-container">
+        <h1>About Us</h1>
+
+        <!-- About Us Sub-segments -->
+        <div class="about-segment">
+            <h2>Company Overview</h2>
+            <p>Brief history and founding details.</p>
+        </div>
+
+        <div class="about-segment">
+            <h2>Mission and Values</h2>
+            <p>Company's mission statement and core values.</p>
+        </div>
+
+        <div class="about-segment">
+            <h2>Vision</h2>
+            <p>Future goals and vision for the company.</p>
+        </div>
+
+        <!-- Medium-size Segment -->
+        <div class="medium-segment">
+            <h2>Team and Leadership</h2>
+            <p>Introduction to key team members and leadership.</p>
+
+            <h2>Brand Story</h2>
+            <p>The story behind the brand's creation and development.</p>
+
+            <h2>Quality and Commitment</h2>
+            <p>Commitment to quality products or services.</p>
+
+            <h2>Customer-Centric Approach</h2>
+            <p>Focus on customer satisfaction and service.</p>
+
+            <h2>Social and Environmental Responsibility</h2>
+            <p>Any social or environmental initiatives and practices.</p>
+
+            <h2>Partnerships and Affiliations</h2>
+            <p>Notable partnerships, collaborations, or affiliations.</p>
+        </div>
+
+        <!-- Small-size Segment -->
+        <div class="small-segment">
+            <h2>Contact Information</h2>
+            <p>Contact details for customer inquiries and support.</p>
+
+            <!-- Contact Information Icons -->
+            <div class="contact-icons">
+                <a href="https://www.myntra.com/" class="contact-icon">
+                    <!-- Website icon (replace the link with your actual website link) -->
+                    🌐
+                </a>
+
+                <a href="https://instagram.com/yourinstagram" class="contact-icon">
+                    <!-- Instagram icon (replace the link with your actual Instagram link) -->
+                    📷
+                </a>
+
+                <!-- Add more contact icons as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Shop Now Button -->
+    <div class="shop-now-box">
+        <a href="Prodis.html" class="btn">
+            <span class="cart-icon">🛒</span> Shop Now
+        </a>
+    </div>
+
+    <!-- Sliding Images -->
+        <!-- Add more slides as needed -->
+
+        <!-- Navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <!-- Add more dots as needed -->
+        </div>
+    </div>
+</div>
+
+<script>
+       // Sliding images script
+       let slideIndex = 0;
+
+function showSlides() {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change slide every 2 seconds
+}
+
+showSlides();
+
+// Add your existing scripts here
+</script>
+
+</body>
+</html>
